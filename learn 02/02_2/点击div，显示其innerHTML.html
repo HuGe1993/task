@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>点击DIV，显示其innerHTML</title>
+<style>
+body{font:16px/1.5 Tohamo}
+#outer{width:80%;margin:10px auto;}
+article{text-indent:2em;border:2px solid #ccc;margin:10px;padding:10px 5px;}
+</style>
+</head>
+
+<body>
+<div id="outer">
+<article><strong>环球时报综合报道</strong>台观光局25日公布9月来台旅客人数统计，结果显示陆客不到<strong>21.5万人次</strong>，比去年同期减少<strong>13万人次</strong>，降幅达<strong>38%</strong>，团客大减五成左右，为2008年开放陆客观光以来最惨。为挽救低迷市场，观光局拟放宽陆客自由行条件。
+</article>
+<article>联合新闻网25日称，根据现行规定，陆客来台自由行入境最多只有15天，且必须出示拥有相当于20万元(新台币，下同)以上的存款，或持有银行核发金卡或年工资所得达50万元才可申请来台。观光局称，未来将修法延长入境天数，同时降低财力门槛限制，如此一来对大陆年轻人、背包客来说诱因会提高。此外，现行规定旅行社必须先缴纳100万元保证金，才能开始接待陆客;若陆客来台过程中逾期滞留或行踪不明，则要扣<strong style="color:red;">10万元保证金</strong>，不少业者为此叫苦连天。观光局评估，该规定行之有年，现行陆客脱逃案例发生比例极低，可考虑降低保证金额度以及扣除的金额。(于名)
+</article>
+</div>
+<script>
+window.onload = function()
+{
+	var oDiv = document.getElementsByTagName("article")
+	for(var i = 0;i<oDiv.length;i++)
+	{
+		oDiv[i].onclick = function()
+		{
+			alert(this.innerHTML);
+		}
+	}
+}
+</script>
+</body>
+</html>

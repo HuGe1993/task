@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>弹出层效果</title>
+<style>
+html,body{height:100%;overflow:hidden;font:12px/1.5 Tahoma;}
+body,div,h2,span{margin:0;padding:0;}
+center{padding-top:10px;}
+button{cursor:pointer;}
+#overlay{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.5;filter:Alhpa(opacity=50);background-color:#ccc;display:none;}
+#spread{position:absolute;left:50%;top:50%;margin:-100px 0 0 -100px;width:200px;height:200px;background-color:#FFFFFF;border:3px solid #F89C26;display:none;}
+h2{display:block;border-bottom:2px solid#F89C26;background-color:#F2CA54;padding:5px;text-align:right;}
+h2 span{background-color:#FFFFFF;color:red;padding:0 4px;cursor:pointer;border:1px solid #F89C26;}
+</style>
+</head>
+
+<body>
+<div id="outer">
+<div id="overlay"></div>
+<div id="spread"><h2><span id="close">x</span></h2></div>
+<center><button>弹出层</button></center>
+
+</div>
+<script>
+window.onload = function()
+{
+	var oSpread = document.getElementById("spread");
+	var oOverlay = document.getElementById("overlay");
+	var oClose = document.getElementById("close");
+	var oBtn = document.getElementsByTagName("button")[0];
+	oBtn.onclick = function()
+	{
+		oSpread.style.display = "block";
+		oOverlay.style.display = "block";
+	}
+	oClose.onclick = function()
+	{
+		oSpread.style.display = "none";
+		oOverlay.style.display = "none";
+	}
+	oOverlay.onclick = function()
+	{
+		oSpread.style.display = "none";
+		oOverlay.style.display = "none";
+	}
+}
+</script>
+</body>
+</html>

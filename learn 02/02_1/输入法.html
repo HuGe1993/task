@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>输入法</title>
+<style>
+body,ul,li,button{margin:0;padding:0;}
+body{font:20px Tahoma;}
+ul{list-style-type:none;}
+button{cursor:pointer;width:100px;}
+#outer{width:100px;margin:100px auto;}
+#ime{margin-top:5px;background:#fff;border:1px solid #9a99ff;display:none;}
+#ime li{width:100%;line-height:30px;display:inline-block;vertical-align:top;}
+#close{border-top:1px solid #9a99ff;}
+#ime li a{color:#00c;padding:0 5px;display:block;text-decoration:none;}
+#ime li a:hover{background:#d9e1f6;}
+</style>
+</head>
+
+<body>
+<div id="outer">
+    <button>切换输入法</button>
+    <ul id="ime">
+      <li><a href="javascript:;">拼音输入</a></li>
+      <li><a href="javascript:;">手写输入</a></li>
+      <li id="close"><a href="javascript:;">关闭</a></li>
+    </ul>
+</div>
+<script>
+window.onload = function()
+{
+	var oBtn = document.getElementsByTagName("button")[0];
+	var oIme = document.getElementById("ime");
+	var oClose = document.getElementById("close");
+	var style = oIme.style;
+	 
+	oBtn.onclick = function()
+	{
+		style.display = style.display == "block" ? "none" : "block";
+	};
+	oClose.onclick = function()
+	{
+		style.display = "none";
+	};
+	
+}
+</script>
+</body>
+</html>

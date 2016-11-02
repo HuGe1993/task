@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>传参</title>
+<style>
+div{font:12px/1.5 Tahoma;text-align:center;}
+input,button{font-family:inherit;}
+input{border:1px solid #000;}
+button{cursor:pointer;}
+</style>
+<script>
+var myFn = function(a,b)
+{
+	alert(a.value);
+	alert(b.value);	
+}
+window.onload = function ()
+{
+	var oInput = document.getElementsByTagName("input");
+	var oBtn = document.getElementsByTagName("button")[0];
+	oBtn.onclick = function()
+	{
+		myFn(oInput[0], oInput[1]);
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="container">
+<p><input type="text" placeholder="请输入城市名" /></p>
+<p><input type="text" placeholder="请输入街道名" /></p>
+<p><button>传参</button></p>
+</div>
+</body>
+</html>
