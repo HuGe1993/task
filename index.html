@@ -1,25 +1,210 @@
-
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>task</title>
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">task</h1>
-      <h2 class="project-tagline">Javascript</h2>
-      <a href="learn01/1/01.html" class="btn">任务1</a>
-      <a href=" https://huge1993.github.io/task/learn " class="btn">1</a>      
-      <a href=" https://huge1993.github.io/task/learn " class="btn">2</a>
-      <a href=" https://huge1993.github.io/task/learn " class="btn">1</a>      
-      <a href=" https://huge1993.github.io/task/learn " class="btn">1</a>
-      <a href=" https://huge1993.github.io/task/learn " class="btn">1</a>
-      <a href=" https://huge1993.github.io/task/learn " class="btn">1</a>
-      <a href=" https://huge1993.github.io/task/learn " class="btn">1</a>
-      <a href=" https://huge1993.github.io/task/learn " class="btn">1</a>
-      <a href=" https://huge1993.github.io/task/learn " class="btn">1</a>
-      <a href=" https://huge1993.github.io/task/learn " class="btn disable"></a>
-    </section>
-  </body>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>原生JS学习demo</title>
+<style>
+body,div,dl,dt,dd{margin:0;padding:0;}
+a:link,a:visited{color:#FFF;text-decoration:none;}
+a:hover{text-decoration:underline;}
+#wrap{width:350px;background:#FFF;border:12px solid #EEE;border-radius:10px;margin:50px auto 0;padding:5px 5px 4px;}
+#wrap dl{color:#FFF;overflow:hidden;background:#7CF;}
+#wrap dt,#wrap dd{padding-left:15px;border-bottom:1px solid #FFF;}
+#wrap dt{cursor:pointer;font-size:14px;background:#9C0;line-height:30px;font:700 14px/30px Tahoma;}
+#wrap dt.current{background:#09F;}
+#wrap dd{background:#7CF;line-height:25px;font:12px/25px Tahoma;}
+#copyright{color:#999;width:374px;text-align:right;font:12px/1.5 Tahoma;margin:5px auto 0;}
+</style>
+<script src="CreateList.js"></script>
+<script>
+window.onload = function() {
+    new CreateList([
+    {
+        project: [{
+            text: "第一部分"
+        },
+        {
+            text: "控制Div属性",
+            href: "learn01/1/控制DIV属性.html"
+        },
+        {
+            text: "网页换肤",
+            href: "learn01/2/换肤.html"
+        },
+        {
+            text: "函数接收参数并弹出",
+            href: "learn01/3/传参.html"
+        },
+        {
+            text: "用循环将三个Div变成红色",
+            href: "learn01/4/div变色.html"
+        },
+        {
+            text: "鼠标移入/移出改变样式",
+            href: "learn01/6/鼠标移入移出改变样式.html"
+        },
+        {
+            text: "记住密码提示框",
+            href: "learn01/6/记住密码提示框.html"
+        }]
+    },
+    {
+        project: [{
+            text: "第二部分"
+        },
+        {
+            text: "百度输入法",
+            href: "learn02/1/输入法.html"
+        },
+        {
+            text: "点击Div，显示其innerHTML",
+            href: "learn02/2/点击div，显示其innerHTML.html"
+        },
+        {
+            text: "求出数组中所有数字的和",
+            href: "learn02/3/数列求和.html"
+        },
+        {
+            text: "弹出层效果",
+            href: "learn02/4/弹出层效果.html"
+        },
+        {
+            text: "图片列表：鼠标移入/移出改变图片透明度",
+            href: "learn02/5/鼠标移入移出改变透明度.html"
+        },
+        {
+            text: "简易选项卡",
+            href: "learn02/6/简易选项卡.html"
+        },
+        {
+            text: "简易JS年历",
+            href: "learn02/7/简易年历.html"
+        },
+        {
+            text: "单一按钮显示/隐藏一播放列表收缩展开",
+            href: "learn02/8/单一按钮显示隐藏一播放列表收缩展开.html"
+        },
+        {
+            text: "提示框效果",
+            href: "learn02/9/提示框效果.html"
+        },
+        {
+            text: "鼠标移过，修改图片路径",
+            href: "learn02/10/鼠标移动修改路径.html"
+        },
+        {
+            text: "复选框（checkbox）全选/全不选/返选",
+            href: "learn02/11/check的复选.html"
+        }]
+    },
+    {
+        project: [{
+            text: "第三部分"
+        },
+        {
+            text: "用parseInt解析数字，并求和",
+            href: "learn03/1/利用parseInt解析数字并求和.html"
+        },
+        {
+            text: "网页计算器",
+            href: "learn03/2/简易计算器.html"
+        },
+        {
+            text: "简易网页时钟",
+            href: "learn03/3/简易时钟.html"
+        },
+        {
+            text: "倒计时时钟（100秒）",
+            href: "learn03/4/简易倒计时.html"
+        }]
+    },
+    {
+        project: [{
+            text: "第四部分"
+        },
+        {
+            text: "setTimeout应用",
+            href: "learn04/1/setTimeout应用.html"
+        },
+        {
+            text: "自动播放一幻灯片效果",
+            href: "learn04/2/自动播放——幻灯片效果.html"
+        },
+        {
+            text: "自动改变方向一幻灯片效果",
+            href: "learn04/3/自动改变方向.html"
+        },
+        {
+            text: "agruments应用一求出函数参数的总合",
+            href: "learn04/4/设置或读取函数对象的css属性.html"
+        },
+        {
+            text: "数组练习：各种数组方法的使用",
+            href: "learn04/5/数组方法练习.html"
+        },
+        {
+            text: "事件练习：封装兼容性添加、删除事件的函数",
+            href: "learn04/6/封装事件.html"
+        },
+        {
+            text: "星级评分系统",
+            href: "learn04/7/评分系统.html"
+        }]
+    },
+    {
+        project: [{
+            text: "第五部分"
+        },
+        {
+            text: "模拟select控件",
+            href: "learn05/1/模拟select控件.html"
+        },
+        {
+            text: "点击页面，显示单击的坐标",
+            href: "learn05/2/显示单击的坐标.html"
+        },
+        {
+            text: "用户按下键盘，显示keyCode",
+            href: "learn05/3/用户按下键盘，显示keyCode.html"
+        },
+        {
+            text: "阻止右键菜单（阻止默认事件）",
+            href: "learn05/4/跟随鼠标移动（大图展示）.html"
+        },
+        {
+            text: "自定义右键菜单",
+            href: "learn05/5/自定义右键菜单.html"
+        },
+        {
+            text: "用键盘控制Div",
+            href: "learn05/6/控制div.html"
+        },
+        {
+            text: "Div闪烁",
+            href: "learn05/7/DIV闪烁.html"
+        }]
+    },
+    {
+        project: [{
+            text: "第六部分"
+        },
+        {
+            text: "完美拖拽",
+            href: "learn06/1/拖拽窗口.html"
+        },
+        {
+            text: "仿腾讯微博效果",
+            href: "learn06/2/微博.html"
+        },
+        {
+            text: "二叉树遍历示意",
+            href: "learn06/3/二叉树遍历示意.html"
+        }]
+    }
+    ]);
+    
+};
+</script>
+</head>
+<body></body>
 </html>
